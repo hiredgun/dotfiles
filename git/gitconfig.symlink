@@ -1,33 +1,54 @@
 # Local/private config goes in the include
 [include]
         path = ~/.gitconfig.local
-[hub]
-        protocol = https
-[alias]
-        co = checkout
-        promote = !$ZSH/bin/git-promote
-        wtf     = !$ZSH/bin/git-wtf
-        rank-contributors = !$ZSH/bin/git-rank-contributors
-        count   = !git shortlog -sn
+[merge]
+        ff = false
 [color]
-        diff = auto
-        status = auto
-        branch = auto
-        ui = true
+    diff = auto
+    status = auto
+    branch = auto
 [core]
-        excludesfile = ~/.gitignore
-        editor = vim
-[apply]
-        whitespace = nowarn
-[mergetool]
-        keepBackup = false
-[difftool]
-        prompt = false
-[help]
-        autocorrect = 1
+        autocrlf = input
+	excludesfile = /Users/hiredgun/.gitignore_global
+[filter "media"]
+        clean = git-media-clean %f
+        smudge = git-media-smudge %f
+[alias]
+        cp = cherry-pick
+        st = status -s
+        cl = clone
+        ci = commit
+        co = checkout
+        br = branch
+        diff = diff --word-diff
+        dc = diff --cached
+        r = reset
+        r1 = reset HEAD^
+        r2 = reset HEAD^^
+        rh = reset --hard
+        rh1 = reset HEAD^ --hard
+        rh2 = reset HEAD^^ --hard
+        lnc = log --pretty=format:"%h\\ %s\\ [%cn]"
+        ls = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate
+# List commits showing changed files
+        ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat
+# List oneline commits showing relative dates
+        lds = log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=short
+        fl = log -u
+# Show modified files in last commit
+        dl = "!git ll -1"
+# Show a diff last commit
+        dlc = diff --cached HEAD^
 [push]
-        # See `git help config` (search for push.default)
-        # for more information on different options of the below setting.
-        #
-        # Setting to git 2.0 default to suppress warning message
         default = simple
+[filter "lfs"]
+        clean = git-lfs clean %f
+        smudge = git-lfs smudge %f
+        required = true
+
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Users/hiredgun/Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
