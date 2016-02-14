@@ -9,7 +9,6 @@ plugins=(
     npm
     sudo
     web-search
-    zsh-syntax-highlighting
     composer
     gem
     docker
@@ -30,6 +29,7 @@ plugins=(
     redis-cli
     battery
     emoji-clock
+    zsh-syntax-highlighting #should be the last one
 )
 
 source $ZSH/oh-my-zsh.sh
