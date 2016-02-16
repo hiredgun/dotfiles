@@ -29,6 +29,7 @@ plugins=(
     redis-cli
     battery
     emoji-clock
+    urltools
     zsh-syntax-highlighting #should be the last one
 )
 
