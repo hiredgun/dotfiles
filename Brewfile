@@ -18,6 +18,7 @@ brew 'parallel'
 brew 'ssh-copy-id'
 brew 'unrar'
 brew 'watch'
+brew 'youtube-dl'
 
 #casks
 cask 'spectacle'
