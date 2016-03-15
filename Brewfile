@@ -19,6 +19,8 @@ brew 'ssh-copy-id'
 brew 'unrar'
 brew 'watch'
 brew 'youtube-dl'
+brew 'mongodb'
+brew 'siege'
 
 #casks
 cask 'spectacle'
