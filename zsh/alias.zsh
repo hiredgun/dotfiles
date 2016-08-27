@@ -6,3 +6,4 @@ alias cla='clear && ls -laG'
 alias pubkey="more ~/.ssh/id_rsa.pub | pbcopy | echo '=> Public key copied to pasteboard.'"
 alias cc='clear'
 alias j='jump'
+alias ytdp='youtube-dl --audio-format mp3 -o "$HOME/Music/%(title)s.%(ext)s" -x  --audio-quality 0'
