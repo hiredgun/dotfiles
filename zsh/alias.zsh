@@ -12,4 +12,3 @@ alias dpss='docker ps --filter "status=exited"'
 alias di='docker images'
 alias drmi='docker rmi'
 alias ytdp='youtube-dl --audio-format mp3 -o "$HOME/Music/%(title)s.%(ext)s" -x  --audio-quality 0'
-ž
