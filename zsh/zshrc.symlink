@@ -41,3 +41,8 @@ then
 fi
 
 unset config_files
+
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+alias depot='node /Users/hiredgun/Projects/depot/index.js'
+
+export PATH="/usr/local/opt/gettext/bin:$PATH"

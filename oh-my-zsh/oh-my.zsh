@@ -30,7 +30,8 @@ plugins=(
     battery
     emoji-clock
     urltools
-    zsh-syntax-highlighting #should be the last one
+    zsh-nvm
+    # zsh-syntax-highlighting #should be the last one
 )
 
 source $ZSH/oh-my-zsh.sh
