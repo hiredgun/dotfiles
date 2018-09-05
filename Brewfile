@@ -22,6 +22,13 @@ brew 'watch'
 brew 'youtube-dl'
 brew 'mongodb'
 brew 'siege'
+brew 'bat'
+brew 'prettyping'
+brew 'fzf'
+brew 'icdiff'
+brew 'diff-so-fancy'
+brew 'fd'
+brew 'ncdu'
 
 #casks
 cask 'spectacle'

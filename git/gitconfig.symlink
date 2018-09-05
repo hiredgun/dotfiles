@@ -45,10 +45,10 @@
         clean = git-lfs clean %f
         smudge = git-lfs smudge %f
         required = true
-
-[difftool "sourcetree"]
-	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path = 
-[mergetool "sourcetree"]
-	cmd = /Users/hiredgun/Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
-	trustExitCode = true
+[commit]
+	template = /Users/hiredgun/.stCommitMsg
+[icdiff]
+	options = --line-numbers
+[pager]
+       diff = diff-so-fancy | less --tabs=1,5 -RFX
+       show = diff-so-fancy | less --tabs=1,5 -RFX
