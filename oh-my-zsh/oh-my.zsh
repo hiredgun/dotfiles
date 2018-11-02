@@ -30,9 +30,14 @@ POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(node_version)
 
 plugins=(
     git
+    gitfast
     git-flow
+    httpie
     macports
+    bgnotify
+    docker-compose
     npm
+    nvm
     sudo
     web-search
     composer
