@@ -1,3 +1,25 @@
+## configuring poewrline9k
+
+```bash
+git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/themes/powerlevel9k
+
+git clone https://github.com/lukechilds/zsh-nvm ~/.oh-my-zsh/custom/plugins/zsh-nvm
+
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+```
+
+Set default user in order to hide user section in the prompt
+```
+export DEFAULT_USER=your_user_name
+```
+
+Install Sauce Code Pro Semibold Nerd Font Complete (in the root of this repo)
+
+In order for VS CODE to display glyphs properly install Meslo LG L Regular for Powerline Nerd Font Complete Mono (in the root of this repo);
+
+Import terminal theme (in the root of this repos);
+
+
 ## topical
 
 Everything's built around topic areas. If you're adding a new area to your
